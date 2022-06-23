@@ -1,0 +1,87 @@
+@font-face {
+    font-family: Druk-Wide-Medium-Regular;
+    src: url(../fonts/Druk-Wide-Medium-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Regular;
+    src: url(../fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+    font-family: Montserrat-Light;
+    src: url(../fonts/Montserrat-Light.ttf);
+}
+
+
+$font1: Druk-Wide-Medium-Regular, sans-serif;
+
+$font2Regular: Montserrat-Regular, sans-serif;
+$font2Light: Montserrat-Light, sans-serif;
+
+
+$bg-color: #060507;
+$text-primary-color: #FFFFFF;
+$text-secondary-color: #3F3E44;
+
+
+@keyframes rotateLoop {
+    from {
+
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: $font2Regular;
+    background: $bg-color;
+    color: $text-primary-color;
+
+    &:after{
+        position: absolute;
+        content: '';
+        background: url(../img/Gold.png) center/cover;
+        width: 30%;
+        height: 25%;
+        right: 0;
+        top: 0;
+        z-index: -999;
+
+        @media screen and (max-width: 935px) {
+            display: none;
+        }
+    }
+}
+
+li {
+    list-style: none;
+}
+
+
+main {
+    height: 90vh;
+    display: grid;
+    grid-template-columns: 80% 20%;
+
+    @media screen and (max-width: 935px) {
+        grid-template-columns: 70% 30%;
+    }
+
+    @media screen and (max-width: 535px) {
+        grid-template-columns: 1fr;
+    }
+}

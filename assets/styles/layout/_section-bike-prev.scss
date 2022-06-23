@@ -1,0 +1,172 @@
+.section-bike-prev {
+    margin-top: 26px;
+    display: grid;
+    grid-template-rows: 70% 30%;
+    background: $bg-color;
+    position: relative;
+
+    @media screen and (max-width: 935px) {
+        grid-template-rows: 60% 40%;
+    }
+
+    &::before {
+        position: absolute;
+        content: '';
+        right: 0;
+        bottom: 0;
+        height: 20%;
+        width: 20%;
+        background: url(../img/photo\ 3.png) center/contain no-repeat;
+    }
+
+    .bike-prev {
+
+        .bike-prev-container {
+            position: relative;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 70% 30%;
+            align-items: center;
+
+            &::after{
+                content: '';
+                position: absolute;
+                width: 100%;
+                height: 20%;
+                background: url(../img/Img-text-japanese.png) center/contain repeat-x;
+                bottom: -40px;
+                left: 0;
+
+                @media screen and (max-width: 935px) {
+                    bottom: 0;
+                }
+            }
+
+            @media screen and (max-width: 935px) {
+                grid-template-columns: 1fr;
+            }
+        
+
+            .bike-pic-container {
+                height: 100%;
+                width: 100%;
+                background: url(../img/photo\ 1.png) center/contain no-repeat;
+                position: relative;
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    right: 0;
+                    top: 30px;
+                    height: 30%;
+                    width: 20%;
+                    background: url(../img/MONTBLANC\ MOTORCYCLE.png) center/contain no-repeat;
+                    animation: rotateLoop 15s linear infinite;
+
+                    @media screen and (max-width: 935px) {
+                        right: 50px;
+                    }
+
+                    @media screen and (max-width: 535px) {
+                        top: 0;
+                    }
+                
+                }
+
+
+                .bike-img {
+                    width: 100%;
+                }
+            }
+
+            .deco-img-container {
+                height: 100%;
+                background: url(../img/photo\ 2.png) center/contain no-repeat;
+
+                @media screen and (max-width: 935px) {
+                    display: none;
+                }
+            
+
+                .deco-img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .bike-description {
+        display: grid;
+        grid-template-columns: 300px 400px;
+        align-items: center;
+        position: relative;
+        padding-left: 20px;
+
+        @media screen and (max-width: 935px) {
+            grid-template-columns: 1fr;
+            display: flex;
+            flex-direction: column-reverse;
+            justify-content: center;
+            padding-left: 0;
+        }
+
+        .bike-page-number {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            .progress-bar {
+                width: 100px;
+                height: 1px;
+                background: #fff;
+                position: relative;
+                margin: 0 30px;
+
+                @media screen and (max-width: 935px) {
+                    margin: 30px 0;
+                }
+                
+                &:after{
+                    position: absolute;
+                    content: "";
+                    left: 0;
+                    width: 20%;
+                    height: 1px;
+                    background: #A75B12;
+                }
+            }
+
+            .bloc-page-number {
+                display: flex;
+                font-weight: 500;
+                font-size: 1.8rem;
+
+
+                p {
+                    padding: 0 10px;
+                    font-family: $font1;
+                }
+            }
+
+            .prev-next-icon {
+                font-size: 2rem;
+            }
+
+            .page-number {
+                font-size: 2rem;
+            }
+        }
+
+        .bike-text {
+            margin-left: 30px;
+            font-size: 1.2rem;
+            line-height: 2rem;
+
+            @media screen and (max-width: 935px) {
+                margin-right: 30px;
+                text-align: center;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}

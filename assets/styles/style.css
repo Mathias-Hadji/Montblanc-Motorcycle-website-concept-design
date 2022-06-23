@@ -1,0 +1,357 @@
+@font-face {
+  font-family: Druk-Wide-Medium-Regular;
+  src: url(../fonts/Druk-Wide-Medium-Regular.ttf);
+}
+@font-face {
+  font-family: Montserrat-Regular;
+  src: url(../fonts/Montserrat-Regular.ttf);
+}
+@font-face {
+  font-family: Montserrat-Light;
+  src: url(../fonts/Montserrat-Light.ttf);
+}
+@keyframes rotateLoop {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(-360deg);
+  }
+}
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: Montserrat-Regular, sans-serif;
+  background: #060507;
+  color: #FFFFFF;
+}
+body:after {
+  position: absolute;
+  content: "";
+  background: url(../img/Gold.png) center/cover;
+  width: 30%;
+  height: 25%;
+  right: 0;
+  top: 0;
+  z-index: -999;
+}
+@media screen and (max-width: 935px) {
+  body:after {
+    display: none;
+  }
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  height: 90vh;
+  display: grid;
+  grid-template-columns: 80% 20%;
+}
+@media screen and (max-width: 935px) {
+  main {
+    grid-template-columns: 70% 30%;
+  }
+}
+@media screen and (max-width: 535px) {
+  main {
+    grid-template-columns: 1fr;
+  }
+}
+
+header {
+  height: 10vh;
+  margin: 0 64px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+@media screen and (max-width: 535px) {
+  header {
+    margin: 0 32px;
+  }
+}
+@media screen and (max-width: 935px) {
+  header::after {
+    content: "";
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background: url(../img/menu.png) center/cover;
+    right: 0;
+    cursor: pointer;
+    top: 57%;
+    transform: translateY(-50%);
+    margin: 0 20px;
+  }
+}
+header img {
+  width: 200px;
+  cursor: pointer;
+  margin-right: 30px;
+}
+@media screen and (max-width: 535px) {
+  header img {
+    width: 100px;
+  }
+}
+header nav {
+  width: 40%;
+}
+@media screen and (max-width: 935px) {
+  header nav {
+    display: none;
+  }
+}
+header nav ul {
+  display: flex;
+  justify-content: space-between;
+}
+header nav ul li {
+  font-family: Druk-Wide-Medium-Regular, sans-serif;
+  font-size: 1.2vw;
+  position: relative;
+  top: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.section-bike-prev {
+  margin-top: 26px;
+  display: grid;
+  grid-template-rows: 70% 30%;
+  background: #060507;
+  position: relative;
+}
+@media screen and (max-width: 935px) {
+  .section-bike-prev {
+    grid-template-rows: 60% 40%;
+  }
+}
+.section-bike-prev::before {
+  position: absolute;
+  content: "";
+  right: 0;
+  bottom: 0;
+  height: 20%;
+  width: 20%;
+  background: url(../img/photo\ 3.png) center/contain no-repeat;
+}
+.section-bike-prev .bike-prev .bike-prev-container {
+  position: relative;
+  height: 100%;
+  display: grid;
+  grid-template-columns: 70% 30%;
+  align-items: center;
+}
+.section-bike-prev .bike-prev .bike-prev-container::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background: url(../img/Img-text-japanese.png) center/contain repeat-x;
+  bottom: -40px;
+  left: 0;
+}
+@media screen and (max-width: 935px) {
+  .section-bike-prev .bike-prev .bike-prev-container::after {
+    bottom: 0;
+  }
+}
+@media screen and (max-width: 935px) {
+  .section-bike-prev .bike-prev .bike-prev-container {
+    grid-template-columns: 1fr;
+  }
+}
+.section-bike-prev .bike-prev .bike-prev-container .bike-pic-container {
+  height: 100%;
+  width: 100%;
+  background: url(../img/photo\ 1.png) center/contain no-repeat;
+  position: relative;
+}
+.section-bike-prev .bike-prev .bike-prev-container .bike-pic-container::after {
+  position: absolute;
+  content: "";
+  right: 0;
+  top: 30px;
+  height: 30%;
+  width: 20%;
+  background: url(../img/MONTBLANC\ MOTORCYCLE.png) center/contain no-repeat;
+  animation: rotateLoop 15s linear infinite;
+}
+@media screen and (max-width: 935px) {
+  .section-bike-prev .bike-prev .bike-prev-container .bike-pic-container::after {
+    right: 50px;
+  }
+}
+@media screen and (max-width: 535px) {
+  .section-bike-prev .bike-prev .bike-prev-container .bike-pic-container::after {
+    top: 0;
+  }
+}
+.section-bike-prev .bike-prev .bike-prev-container .bike-pic-container .bike-img {
+  width: 100%;
+}
+.section-bike-prev .bike-prev .bike-prev-container .deco-img-container {
+  height: 100%;
+  background: url(../img/photo\ 2.png) center/contain no-repeat;
+}
+@media screen and (max-width: 935px) {
+  .section-bike-prev .bike-prev .bike-prev-container .deco-img-container {
+    display: none;
+  }
+}
+.section-bike-prev .bike-prev .bike-prev-container .deco-img-container .deco-img {
+  width: 100%;
+}
+.section-bike-prev .bike-description {
+  display: grid;
+  grid-template-columns: 300px 400px;
+  align-items: center;
+  position: relative;
+  padding-left: 20px;
+}
+@media screen and (max-width: 935px) {
+  .section-bike-prev .bike-description {
+    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    padding-left: 0;
+  }
+}
+.section-bike-prev .bike-description .bike-page-number {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.section-bike-prev .bike-description .bike-page-number .progress-bar {
+  width: 100px;
+  height: 1px;
+  background: #fff;
+  position: relative;
+  margin: 0 30px;
+}
+@media screen and (max-width: 935px) {
+  .section-bike-prev .bike-description .bike-page-number .progress-bar {
+    margin: 30px 0;
+  }
+}
+.section-bike-prev .bike-description .bike-page-number .progress-bar:after {
+  position: absolute;
+  content: "";
+  left: 0;
+  width: 20%;
+  height: 1px;
+  background: #A75B12;
+}
+.section-bike-prev .bike-description .bike-page-number .bloc-page-number {
+  display: flex;
+  font-weight: 500;
+  font-size: 1.8rem;
+}
+.section-bike-prev .bike-description .bike-page-number .bloc-page-number p {
+  padding: 0 10px;
+  font-family: Druk-Wide-Medium-Regular, sans-serif;
+}
+.section-bike-prev .bike-description .bike-page-number .prev-next-icon {
+  font-size: 2rem;
+}
+.section-bike-prev .bike-description .bike-page-number .page-number {
+  font-size: 2rem;
+}
+.section-bike-prev .bike-description .bike-text {
+  margin-left: 30px;
+  font-size: 1.2rem;
+  line-height: 2rem;
+}
+@media screen and (max-width: 935px) {
+  .section-bike-prev .bike-description .bike-text {
+    margin-right: 30px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+.section-features {
+  padding: 20px 10px;
+  padding-right: 30px;
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  z-index: -9999;
+  background: #060507;
+  height: 690px;
+  justify-content: center;
+}
+@media screen and (max-width: 935px) {
+  .section-features {
+    height: 100%;
+    justify-content: space-around;
+  }
+}
+@media screen and (max-width: 535px) {
+  .section-features {
+    display: none;
+  }
+}
+.section-features .feature {
+  display: grid;
+  grid-template-columns: 20% 80%;
+  text-transform: uppercase;
+  padding: 20px 0;
+}
+.section-features .feature .feature-container-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-features .feature .feature-container-title p {
+  writing-mode: tb-rl;
+  transform: rotate(180deg);
+  text-align: center;
+  color: #3F3E44;
+  font-size: 1.8rem;
+  text-align: center;
+}
+@media screen and (max-width: 935px) {
+  .section-features .feature .feature-container-title p {
+    font-size: 1.5rem;
+  }
+}
+.section-features .feature .feature-container-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 20px;
+}
+.section-features .feature .feature-container-content p:nth-of-type(2n + 1) {
+  font-size: 0.7vw;
+}
+@media screen and (max-width: 935px) {
+  .section-features .feature .feature-container-content p:nth-of-type(2n + 1) {
+    font-size: 0.9rem;
+  }
+}
+.section-features .feature .feature-container-content p:nth-of-type(2) {
+  font-size: 1.8vw;
+  font-family: Druk-Wide-Medium-Regular, sans-serif;
+  margin: 20px 0;
+  white-space: nowrap;
+}
+@media screen and (max-width: 935px) {
+  .section-features .feature .feature-container-content p:nth-of-type(2) {
+    font-size: 1.6rem;
+  }
+}/*# sourceMappingURL=style.css.map */
