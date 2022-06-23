@@ -25,6 +25,10 @@
         text-transform: uppercase;
         padding: 20px 0;
 
+        opacity: 0;
+        animation: animAppearanceObj 1s ease-in-out forwards;
+        animation-delay: 1s;
+
         .feature-container-title {
             display: flex;
             flex-direction: column;

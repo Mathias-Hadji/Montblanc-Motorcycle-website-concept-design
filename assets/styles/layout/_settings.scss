@@ -27,7 +27,6 @@ $text-secondary-color: #3F3E44;
 
 @keyframes rotateLoop {
     from {
-
         transform: rotate(0deg);
     }
 
@@ -35,6 +34,20 @@ $text-secondary-color: #3F3E44;
         transform: rotate(-360deg);
     }
 }
+
+@keyframes animAppearanceObj {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+
 
 *, ::before, ::after {
     margin: 0;
